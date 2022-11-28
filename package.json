@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+   
+
+    "lint": "next lint",
+    "dev": "next dev -p 80",
+    "start": "next start -p 80"
   },
   "dependencies": {
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sharp": "^0.31.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
