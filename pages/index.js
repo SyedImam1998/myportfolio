@@ -75,9 +75,12 @@ export default function Home() {
       </div>
 
       {/* Image part */}
+      <div className={styles.grandPa}>
+
       <div className={styles.imageParentDiv}>
       <div className={styles.imageCircle}>
        <Image src={ImamImage} className={styles.imagediv} alt="imamjpg"/>
+      </div>
       </div>
       </div>
       

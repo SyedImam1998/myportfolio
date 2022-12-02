@@ -12,6 +12,12 @@
 .closeImage{
   cursor: pointer;
 }
+@keyframes rotateGlow {
+  0%   {box-shadow: 0px 0px 31.75px #00CEFC; transform: rotate(180deg);}
+  25%  {box-shadow: 0px 0px 63.5px #00CEFC; }
+  50%  {box-shadow: 0px 0px 95.25px #00CEFC; }
+  100% {box-shadow: 0px 0px 63.5px #00CEFC; }
+}
 
 @media  (width>=600px) {
   .navBar{
@@ -76,17 +82,52 @@
     color:white;
     width: max-content;
   }
+
+
+  
+
+  .imageParentDiv{
+    position: relative;
+    right: -65%;
+    bottom: 4%;
+    transform: translateY(109px);
+  }
+  .imageParentDiv::after{
+    content: "";
+      border: 9px dashed #00CEFC;
+      padding: 2px;
+      border-radius: 50%;
+      display: inline-block;
+      width: 382px;
+      height: 382px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0px 0px 63.5px #00CEFC;
+      animation-name: rotateGlow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+  }
+
   .imageCircle{
     width:382px;
     height: 382px;
-    border:9px solid #00CEFC;
-    box-shadow: 0px 0px 127px #00CEFC;
-    border-radius: 50%;
-    overflow: hidden;
-    position: absolute;
+    /*
+     border:9px dashed #00CEFC;
+    animation-name: rotateGlow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     right:10%;
-    top:25%;
+    position: absolute;
+    top:25%; */
+    overflow: hidden;
+    border-radius: 50%;
   }
+
+
   
   .imagediv{
     object-fit: cover;
@@ -115,7 +156,7 @@
     gap: 20%;
     /* border:1px solid white; */
     width: 10%;
-    transform: translate(96%,651%);
+    transform: translate(102%,-103%);
   }
   .work{
     width:51px;
@@ -137,7 +178,7 @@
     /* overflow: hidden; */
   
     /* bottom: -20%; */
-    transform: translate(-58%,169%);
+    transform: translate(-58%,44%);
     box-shadow: 46px 0px 265px #00cefc;
     /* transform: translateY(100%);/ */
     border-radius: 50%;
@@ -214,7 +255,8 @@
     align-items: center;
     transform: translateY(40%);
   }
-  .imageParentDiv{
+
+  .grandPa{
     width: 100%;
     /* border: 1px solid white; */
     display: flex;
@@ -222,13 +264,41 @@
     align-items: center;
     transform: translateY(20%);
   }
+  .imageParentDiv{
+    width: 224px;
+    height: 224px;
+    /* border: 1px solid white; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transform: translate(50%,20%); */
+  }
+  .imageParentDiv::after{
+    content: "";
+      border: 9px dashed #00CEFC;
+      /* padding: 2px; */
+      border-radius: 50%;
+      display: inline-block;
+      width: 224px;
+      height: 224px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0px 0px 63.5px #00CEFC;
+      animation-name: rotateGlow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+  }
   .imageCircle{
     width: 224px;
     height: 224px;
-    border: 9px solid #00CEFC;
+    /* border: 9px solid #00CEFC; */
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0px 0px 27px #00CEFC;
+    /* box-shadow: 0px 0px 27px #00CEFC; */
 
   }
 
